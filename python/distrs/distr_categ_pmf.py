@@ -1,3 +1,5 @@
+from os import path
+
 import numpy as np
 from matplotlib import pyplot as plt
 
