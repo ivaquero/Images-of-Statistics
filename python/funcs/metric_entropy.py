@@ -31,5 +31,5 @@ for dist, label, ax in zip(
     ax.legend(loc=2, handlelength=0)
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/funcs/{filename}.png")
 plt.show()

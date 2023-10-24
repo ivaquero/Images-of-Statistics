@@ -25,5 +25,5 @@ ax.set(xlabel="X", ylabel="PMF(X)", title="Poisson Distribution")
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()

@@ -26,5 +26,5 @@ ax.set(
 )
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/trials/{filename}.png")
 plt.show()

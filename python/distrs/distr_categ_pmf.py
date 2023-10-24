@@ -21,5 +21,5 @@ ax.scatter(x, y, label=f"$μ={μ:.2f},\ σ={σ:.2f}$")
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()

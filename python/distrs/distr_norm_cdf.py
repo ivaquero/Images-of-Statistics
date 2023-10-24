@@ -28,5 +28,5 @@ ax.set(xlabel="X", ylabel="CDF(X)", title="Normal Distribution")
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()

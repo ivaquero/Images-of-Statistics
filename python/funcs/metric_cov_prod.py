@@ -1,3 +1,9 @@
+"""
+Original Author: Xavier Yang
+Link: https://github.com/ivaquero
+"""
+from os import path
+
 import matplotlib.pyplot as plt
 from metric_cov import plot_cov_ellipse
 from metric_utils import multi_guassian_product

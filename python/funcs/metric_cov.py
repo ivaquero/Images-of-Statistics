@@ -62,9 +62,9 @@ def plot_cov_ellipse(
     ax.set(title=f"[{cov[0]}\n   {cov[1]}]")
 
 
-# _, ax = plt.subplots()
-# mean = [2, 7]
-# P = [[2, 0], [0, 2]]
-# std = [1, 2, 3]
-# plot_cov_ellipse(ax, mean, P, stds=std)
-# plt.show()
+_, ax = plt.subplots()
+mean = [2, 7]
+P = [[2, 0], [0, 2]]
+std = [1, 2, 3]
+plot_cov_ellipse(ax, mean, P, stds=std)
+plt.show()

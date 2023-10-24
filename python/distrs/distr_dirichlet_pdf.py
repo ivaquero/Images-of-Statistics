@@ -54,5 +54,5 @@ for ls, alpha in zip(α_lists, alphas):
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()

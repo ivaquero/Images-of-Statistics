@@ -26,5 +26,5 @@ ax.set(xlabel="x", ylabel="PMF(X)", title="Binomial Distribution")
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()

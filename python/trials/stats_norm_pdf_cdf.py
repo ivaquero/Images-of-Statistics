@@ -44,5 +44,5 @@ axes[1].axvline(x=0, ymin=0.05, ymax=1, ls="--")
 axes[1].set(xlabel="x", ylabel="CDF(x)")
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/trials/{filename}.png")
 plt.show()

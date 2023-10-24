@@ -39,5 +39,5 @@ for ax, n, color, alpha in zip(axes, ns, colors, alphas):
 axes[0].set(ylabel="Frequency")
 
 filename, extension = path.splitext(path.basename(__file__))
-plt.savefig(f"../../images/dists/{filename}.png")
+plt.savefig(f"../../images/trials/{filename}.png")
 plt.show()

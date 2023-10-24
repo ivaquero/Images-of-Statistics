@@ -1,3 +1,9 @@
+"""
+Original Author: Xavier Yang
+Link: https://github.com/ivaquero
+"""
+from os import path
+
 import matplotlib.pyplot as plt
 import numpy as np
 
