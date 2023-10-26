@@ -4,9 +4,9 @@ Link: https://github.com/ivaquero
 """
 from os import path
 
+import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.patches import Ellipse
 
 
 def covariance_ellipse(cov, deviations=1):
@@ -44,7 +44,7 @@ def plot_cov_ellipse(
     height = ellipse[2] * 2.0
 
     for sd in stds:
-        e = Ellipse(mean, sd * width, sd * height, angle=angle)
+        e = patches.Ellipse(mean, sd * width, sd * height, angle=angle)
         ax.add_patch(e)
         e.set(
             facecolor=facecolor,
