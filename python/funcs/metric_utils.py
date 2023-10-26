@@ -2,8 +2,6 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
-from os import path
-
 import numpy as np
 
 

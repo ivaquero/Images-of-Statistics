@@ -2,6 +2,8 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+from os import path
+
 import matplotlib.pyplot as plt
 import metric_cov
 import numpy as np
@@ -47,4 +49,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection="3d")
 plot_cov3d_surface(ax, mean, cov)
 ax.set(xlabel="X", ylabel="Y")
+
+filename, extension = path.splitext(path.basename(__file__))
+plt.savefig(f"../../images/funcs/{filename}.png")
 plt.show()

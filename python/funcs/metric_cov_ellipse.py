@@ -2,6 +2,8 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+from os import path
+
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Ellipse
@@ -23,7 +25,7 @@ def plot_cov_ellipse(
     ax,
     mean,
     cov,
-    stds=[1],
+    stds=None,
     show_semiaxis=False,
     show_center=True,
     angle=1,
@@ -33,6 +35,8 @@ def plot_cov_ellipse(
     label="",
     **line_kwargs,
 ):
+    if stds is None:
+        stds = [1]
     ellipse = covariance_ellipse(cov)
 
     angle = np.degrees(ellipse[0])
@@ -67,4 +71,7 @@ mean = [2, 7]
 P = [[2, 0], [0, 2]]
 std = [1, 2, 3]
 plot_cov_ellipse(ax, mean, P, stds=std)
+
+filename, extension = path.splitext(path.basename(__file__))
+plt.savefig(f"../../images/funcs/{filename}.png")
 plt.show()

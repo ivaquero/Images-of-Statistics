@@ -71,4 +71,7 @@ fig = plt.gcf()
 ax = fig.add_subplot(111, projection="3d")
 plot_3d_covariance(ax, mu, C, alpha=0.4, std=3)
 ax.scatter(sample[:, 0], sample[:, 1], zs=sample[:, 2])
+
+filename, extension = path.splitext(path.basename(__file__))
+plt.savefig(f"../../images/funcs/{filename}.png")
 plt.show()

@@ -24,4 +24,7 @@ plot_cov_ellipse(
     ax, (10, 10), P2, edgecolor="k", facecolor="navy", alpha=0.8, label="posterior"
 )
 ax.legend()
+
+filename, extension = path.splitext(path.basename(__file__))
+plt.savefig(f"../../images/funcs/{filename}.png")
 plt.show()
