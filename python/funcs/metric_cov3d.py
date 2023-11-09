@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+import math
 from os import path
 
 import matplotlib.pyplot as plt
@@ -31,11 +32,11 @@ def plot_3d_covariance(ax, mean, cov, std=1.0, color=None, alpha=1.0, N=60, **kw
         raise ValueError("covariance matrix must be positive definite")
 
     # calculate cartesian coordinates for the ellipsoid surface
-    u = np.linspace(0.0, 2.0 * np.pi, N)
-    v = np.linspace(0.0, np.pi, N)
-    x = np.outer(np.cos(u), np.sin(v)) * radii[0]
-    y = np.outer(np.sin(u), np.sin(v)) * radii[1]
-    z = np.outer(np.ones_like(u), np.cos(v)) * radii[2]
+    u = np.linspace(0.0, 2.0 * math.pi, N)
+    v = np.linspace(0.0, math.pi, N)
+    x = np.outer(math.cos(u), math.sin(v)) * radii[0]
+    y = np.outer(math.sin(u), math.sin(v)) * radii[1]
+    z = np.outer(np.ones_like(u), math.cos(v)) * radii[2]
 
     # rotate data with eigenvector and center on mu
     a = np.kron(eigvec[:, 0], x)

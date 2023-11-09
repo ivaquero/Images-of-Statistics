@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+import math
 from os import path
 
 import matplotlib.pyplot as plt
@@ -15,8 +16,8 @@ def plot_cov3d_scatter(ax, mean, cov):
     # get orientation, width, height of covariance ellipse
     o, w, h = metric_cov.covariance_ellipse(cov, 3)
     # rotate width and height to x, y axis
-    wx = abs(w * np.cos(o) + h * np.sin(o)) * 1.2
-    wy = abs(h * np.cos(o) - w * np.sin(o)) * 1.2
+    wx = abs(w * math.cos(o) + h * math.sin(o)) * 1.2
+    wy = abs(h * math.cos(o) - w * math.sin(o)) * 1.2
 
     # decentered
     w = max(wx, wy)

@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+import math
 from os import path
 
 import matplotlib.patches as patches
@@ -11,9 +12,9 @@ import numpy as np
 
 def covariance_ellipse(cov, deviations=1):
     U, s, _ = np.linalg.svd(cov)
-    orientation = np.arctan2(U[1, 0], U[0, 0])
-    width_radius = deviations * np.sqrt(s[0])
-    height_radius = deviations * np.sqrt(s[1])
+    orientation = math.atan2(U[1, 0], U[0, 0])
+    width_radius = deviations * math.sqrt(s[0])
+    height_radius = deviations * math.sqrt(s[1])
 
     if height_radius > width_radius:
         raise ValueError("width_radius must be greater than height_radius")
@@ -60,8 +61,11 @@ def plot_cov_ellipse(
     if show_semiaxis:
         a = ellipse[0]
         h, w = height / 4, width / 4
-        ax.plot([x, x + h * np.cos(a + np.pi / 2)], [y, y + h * np.sin(a + np.pi / 2)])
-        ax.plot([x, x + w * np.cos(a)], [y, y + w * np.sin(a)])
+        ax.plot(
+            [x, x + h * math.cos(a + math.pi / 2)],
+            [y, y + h * math.sin(a + math.pi / 2)],
+        )
+        ax.plot([x, x + w * math.cos(a)], [y, y + w * math.sin(a)])
 
     ax.set(title=f"[{cov[0]}\n   {cov[1]}]")
 
