@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 
-np.random.seed(42)
+np.random.default_rng(42)
 x = range(10)
 q = stats.binom(10, 0.75)
 r = stats.randint(0, 10)

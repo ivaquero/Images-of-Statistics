@@ -10,8 +10,8 @@ from scipy import stats
 
 plt.style.use("seaborn-v0_8-dark")
 
-np.random.seed(42)
-x = np.random.randn(100) + 5
+rng = np.random.default_rng(42)
+x = rng.normal(size=100) + 5
 
 std = np.std(x, ddof=1)
 sem = stats.sem(x)

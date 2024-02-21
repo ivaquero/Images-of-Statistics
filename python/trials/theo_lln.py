@@ -10,7 +10,7 @@ from scipy import stats
 
 plt.style.use("seaborn-v0_8-dark")
 
-np.random.seed(42)
+np.random.default_rng(42)
 
 n_sim = 1000
 p = 1 / 2

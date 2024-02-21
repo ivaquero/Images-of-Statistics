@@ -2,10 +2,10 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
-import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.stats as stats
+from matplotlib import cm
+from scipy import stats
 
 xs = np.array([[1.0, 0.0], [2.0, 1.0], [2, 1.0], [5, 1.0]])
 ps = np.array(

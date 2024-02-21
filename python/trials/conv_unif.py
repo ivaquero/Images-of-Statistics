@@ -10,7 +10,7 @@ from scipy import stats
 
 plt.style.use("seaborn-v0_8-dark")
 
-np.random.seed(42)
+np.random.default_rng(42)
 x = stats.uniform.rvs(size=10**5)
 y = stats.uniform.rvs(size=10**5)
 
