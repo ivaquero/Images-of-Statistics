@@ -2,15 +2,16 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
 from metric_cov import plot_cov_ellipse
-from metric_utils import multi_guassian_product
+from metric_utils import multi_gaussian_product
 
 P0 = [[6, 0], [0, 6]]
 P1 = [[2, 1.9], [1.9, 2]]
-P2 = multi_guassian_product((10, 10), P0, (10, 10), P1)[1]
+P2 = multi_gaussian_product((10, 10), P0, (10, 10), P1)[1]
 
 _, ax = plt.subplots(figsize=(6, 4))
 
