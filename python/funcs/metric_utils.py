@@ -13,7 +13,7 @@ def multi_gaussian_product(mean1, cov1, mean2, cov2):
     mean2 = np.asarray(mean2)
 
     sum_inv = np.linalg.inv(cov1 + cov2)
-    mean = np.dot(cov2, sum_inv).dot(mean1) + np.dot(cov1, sum_inv).dot(mean2)
-    cov = np.dot(cov1, sum_inv).dot(cov2)
+    mean = cov2 @ sum_inv @ mean1 + cov1 @ sum_inv @ mean2
+    cov = cov1 @ sum_inv @ cov2
 
     return mean, cov
