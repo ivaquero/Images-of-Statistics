@@ -12,10 +12,10 @@ p = 1 / 1000;
 d_poisson = Poisson(λ);
 rvs_poisson = rand(d_poisson, 1000);
 
-fig = Figure(resolution = (500, 400));
+fig = Figure(resolution=(500, 400));
 ax = Axis(fig[1, 1]);
 
-hist!(ax, rvs_poisson; bins = 10, strokewidth = 1, strokecolor = :black);
+hist!(ax, rvs_poisson; bins=10, strokewidth=1, strokecolor=:black);
 limits!(ax, -0.5, 6.5, 0, 400);
 ax.title = "Generated Poisson R.V.s"
 fig
