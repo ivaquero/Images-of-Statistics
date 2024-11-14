@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from itertools import product
 from os import path
 
@@ -15,7 +16,7 @@ from scipy import stats
 
 k, g = np.mgrid[-5:5:0.1, -5:5:0.1]
 
-pos = np.empty(k.shape + (2,))
+pos = np.empty((*k.shape, 2))
 pos[:, :, 0], pos[:, :, 1] = k, g
 
 f, ax = plt.subplots(

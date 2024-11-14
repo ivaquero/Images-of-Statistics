@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -19,11 +20,7 @@ t = x + y
 _, ax = plt.subplots()
 
 ax.hist(t, bins=20)
-ax.set(
-    xlabel="$x + y$",
-    ylabel="Frequency",
-    title="Histogram of $T = X + Y$",
-)
+ax.set(xlabel="$x + y$", ylabel="Frequency", title="Histogram of $T = X + Y$")
 
 filename, extension = path.splitext(path.basename(__file__))
 plt.savefig(f"../../images/trials/{filename}.png")

@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from itertools import combinations
 from os import path
 
@@ -18,6 +19,7 @@ def probs(n_trials, pair):
         return special.factorial(n_trials) / np.prod(
             [special.factorial(i) for i in pair]
         )
+    return None
 
 
 def multinomial(n_trials):

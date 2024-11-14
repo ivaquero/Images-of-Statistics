@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -21,9 +22,7 @@ r_pmf = r.pmf(x)
 _, axes = plt.subplots(1, 3, figsize=(12, 4), sharey=True, constrained_layout=True)
 
 for dist, label, ax in zip(
-    [true_distribution, q_pmf, r_pmf],
-    ["true_distribution", "q", "r"],
-    axes.flatten(),
+    [true_distribution, q_pmf, r_pmf], ["true_distribution", "q", "r"], axes.flatten()
 ):
     ax.vlines(x, 0, dist, label=f"entropy = {stats.entropy(dist):.2f}")
     ax.set_title(label)

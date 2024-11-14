@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -30,9 +31,13 @@ dashes = [20, 5]
 ax.axhline(se[0], ls="--", color="r").set_dashes(dashes)
 ax.axhline(se[1], ls="--", color="r").set_dashes(dashes)
 
-arrow = dict(
-    width=0.25, length_includes_head=True, head_length=0.2, head_width=1, color="k"
-)
+arrow = {
+    "width": 0.25,
+    "length_includes_head": True,
+    "head_length": 0.2,
+    "head_width": 1,
+    "color": "k",
+}
 
 ax.arrow(10, np.mean(x), 0, std, **arrow)
 ax.arrow(10, np.mean(x), 0, -std, **arrow)
@@ -48,7 +53,7 @@ ax.annotate(
     fontsize="medium",
     xytext=(75, 5.5),
     textcoords="data",
-    arrowprops=dict(facecolor="black", shrink=0.05),
+    arrowprops={"facecolor": "black", "shrink": 0.05},
 )
 
 filename, extension = path.splitext(path.basename(__file__))

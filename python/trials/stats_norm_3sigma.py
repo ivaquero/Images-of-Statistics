@@ -1,7 +1,8 @@
 """
-    Code by Xavier Yang(@ivaquero)
-    https://github.com/ivaquero
+Code by Xavier Yang(@ivaquero)
+https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -27,7 +28,7 @@ for i in range(3):
     end = loc + scale * (i + 1)
     y_fall = func.cdf(end) - func.cdf(start)
 
-    X_dist = X[X <= end][X[X <= end] >= start]
+    X_dist = X[end >= X][X[end >= X] >= start]
     y_dist = func.pdf(X_dist)
     ax.fill_between(
         X_dist,
@@ -37,11 +38,7 @@ for i in range(3):
         label=f"i = {i + 1}, % = {round(y_fall, 3)}",
     )
 
-ax.set(
-    xlim=(-3, 3),
-    ylim=(0, 0.45),
-    title="Percentage of X falling between $i$ σ",
-)
+ax.set(xlim=(-3, 3), ylim=(0, 0.45), title="Percentage of X falling between $i$ σ")
 ax.legend()
 
 filename, extension = path.splitext(path.basename(__file__))

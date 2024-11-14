@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -24,14 +25,7 @@ y = x_bar
 _, ax = plt.subplots(figsize=(10, 5))
 
 ax.plot(x, y, label=r"$\bar{X}$")
-ax.hlines(
-    p,
-    0,
-    n_sim,
-    linestyle="dotted",
-    alpha=0.5,
-    label=f"$p={p}$",
-)
+ax.hlines(p, 0, n_sim, linestyle="dotted", alpha=0.5, label=f"$p={p}$")
 
 ax.set(
     xlim=[0, n_sim],

@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm
@@ -10,22 +11,10 @@ from scipy import stats
 xs = np.array([[1.0, 0.0], [2.0, 1.0], [2, 1.0], [5, 1.0]])
 ps = np.array(
     [
-        [
-            [1.0, 0.5],
-            [0.5, 1.0],
-        ],
-        [
-            [1.0, 0.5],
-            [0.5, 1.0],
-        ],
-        [
-            [1.0, 0.5],
-            [0.5, 1.0],
-        ],
-        [
-            [1.0, 0.5],
-            [0.5, 1.0],
-        ],
+        [[1.0, 0.5], [0.5, 1.0]],
+        [[1.0, 0.5], [0.5, 1.0]],
+        [[1.0, 0.5], [0.5, 1.0]],
+        [[1.0, 0.5], [0.5, 1.0]],
     ]
 )
 

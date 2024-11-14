@@ -2,6 +2,7 @@
 Original Author: Xavier Yang
 Link: https://github.com/ivaquero
 """
+
 from os import path
 
 import matplotlib.pyplot as plt
@@ -19,5 +20,6 @@ axes[0].set(xlim=(-0.5, 6), xlabel="X", ylabel="PDF(X)")
 
 axes[1].plot(np.log(x), y)
 axes[1].set(xlabel="log(X)")
-
+filename, extension = path.splitext(path.basename(__file__))
+plt.savefig(f"../../images/distrs/{filename}.png")
 plt.show()
