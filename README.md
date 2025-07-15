@@ -3,7 +3,7 @@
 ![code size](https://img.shields.io/github/languages/code-size/ivaquero/Images-of-Data-Science.svg)
 ![repo size](https://img.shields.io/github/repo-size/ivaquero/Images-of-Data-Science.svg)
 
-A collection of reproducible images of statistics, which includes images of
+A collection of reproducible images of data science, which includes images of
 the following topics
 
 ## Probability Distributions
