@@ -1,7 +1,7 @@
-# Images of Statistics
+# Images of Data Science
 
-![code size](https://img.shields.io/github/languages/code-size/ivaquero/Images-of-Statistics.svg)
-![repo size](https://img.shields.io/github/repo-size/ivaquero/Images-of-Statistics.svg)
+![code size](https://img.shields.io/github/languages/code-size/ivaquero/Images-of-Data-Science.svg)
+![repo size](https://img.shields.io/github/repo-size/ivaquero/Images-of-Data-Science.svg)
 
 A collection of reproducible images of statistics, which includes images of
 the following topics
@@ -42,10 +42,31 @@ the following topics
 - Entropy
 - Standard Error of Mean (SEM)
 
-## Statistical Trials
+## Data-Sciencel Trials
 
 - Central Limit Theorem
 - Law of Large Numbers
 - Convulution of Uniform Distribution
 - Normal Distribution with 3 Sigmas
 - Normal Distribution's PDF and CDF
+
+## Complexity
+
+### Fractals
+
+- Sierpinski Triangle
+- Sierpinski Square
+- Koch Curve
+- Koch Flake
+
+### Graphs
+
+- Erdos-Renyi
+- Watts-Strogatz
+- Barabasi-Albert
+
+### Physics
+
+- Ising Model
+
+## Credits
