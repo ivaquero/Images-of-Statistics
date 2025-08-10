@@ -23,7 +23,6 @@
         "B",    # flake8-bugbear
         "C4",   # flake8-comprehensions
         "EM",   # flake8-errmsg
-        "EXE",  # flake8-executable
         "FA",   # flake8-future-annotations
         "G",    # flake8-logging-format
         "INT",  # flake8-gettext
@@ -40,7 +39,6 @@
         "I",    # import sorting
         "ISC",  # string concatenation
         "NPY",  # numpy specific rules
-        "PD",   # pandas-vet
         "PERF", # perflint
         "RUF",  # ruff
         "S",    # security
@@ -73,6 +71,5 @@
 [tool.ruff.lint.isort]
     case-sensitive = true
     combine-as-imports = true
-    force-single-line = true
     force-wrap-aliases = true
     order-by-type = true
